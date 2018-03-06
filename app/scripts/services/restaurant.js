@@ -29,7 +29,6 @@ angular.module('reviewsApp')
    				const restaurant = data.restaurants.find(function(element){
    					return element.id === id;
    				});
-   				console.log(restaurant);
    				return restaurant;
    			});
 		};

@@ -37,8 +37,8 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
-  padding: none;
+  font-size: 18px;
+  padding: 2px 20px 2px 20px;
   text-align: left;
 }
 
@@ -173,7 +173,6 @@ a {
 
 .reviews{
   color: #8f9595;
-  margin: 15px;
 }
 
 .reviews ul{
@@ -185,7 +184,7 @@ a {
 .reviews ul li{
   list-style: none;
   padding: 0;
-  margin: 10px 0 5px 0;
+  margin: 10px 20px 5px 20px;
   border-bottom: 1px dashed #8f9595;
 }
 
@@ -193,6 +192,9 @@ a {
   border-bottom: none;
 }
 
+.reviews ul li .star{
+  color: #49a39c;
+}
 
 .reviews li .details{
   margin: 0;

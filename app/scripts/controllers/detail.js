@@ -12,10 +12,8 @@ angular.module('reviewsApp')
 
     var vm = this;
 
-    console.log($stateParams.id);
    	restaurantService.getRestaurantById($stateParams.id).then(function(restaurant){
    		vm.data = restaurant;
    	});
-
 
   }]);

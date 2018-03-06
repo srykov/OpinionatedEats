@@ -22,9 +22,11 @@
     	<h3>Reviews</h3>
     	<ul id="reviews-list">
     		<li ng-repeat="review in restaurant.data.reviews">
-    			<p class="details">{{review.name}}</p>
-    			<p class="details">{{review.date}}</p>
-    			<p class="details">Rating: {{review.rating}}</p>
+    			<p class="details">{{review.name}} - {{review.date}}</p>
+    			<p class="details">Rating:
+    			<span ng-repeat="n in [].constructor(review.rating) track by $index">
+    				<i class="fas fa-star star"></i>
+    			</div>
     			<p>{{review.comments}}</p>
     		</li>
     	</ul>
