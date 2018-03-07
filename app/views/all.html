@@ -6,24 +6,20 @@
 		</div>
 		<div class="option" id="showMap" ng-click="data.toggleMapDisplay()">
 	      	<i class="fas fa-map-marker-alt fa-2x"></i>
-	      	<span class="name">Map</span>
+	      	<span class="name">Show Map</span>
 	    </div>
 	</section>
 	<section class="filters" ng-show="data.showFilters">
 		<div class="filter-by">
 			<ul>
 				<li><i class="fas fa-map-signs"></i>&nbsp;Neighborhood</li>
-				<li>Manhattan</li>
-				<li>Brooklyn</li>
-				<li>Queens</li>
+				<li ng-repeat="neighborhood in data.neighborhoods">{{neighborhood}}</li>
 			</ul>
 		</div>
 		<div class="filter-by">
 			<ul>
 				<li><i class="fas fa-utensils"></i>&nbsp;Cuisine</li>
-				<li>Pizza</li>
-				<li>Asian</li>
-				<li>BBQ</li>
+				<li ng-repeat="cuisineType in data.cuisineTypes">{{cuisineType}}</li>
 			</ul>
 		</div>
 	</section>
