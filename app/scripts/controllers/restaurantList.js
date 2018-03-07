@@ -12,19 +12,18 @@ angular.module('reviewsApp')
 
     var vm = this;
     this.showFilters = false;
+    this.showMap = false;
 
     restaurantService.getAllRestaurants().then(function(data){
         vm.allRestaurants = data.restaurants;
     });
 
-    this.toggleDisplayFilters = function(){
+    this.toggleFiltersDisplay = function(){
       vm.showFilters = !(vm.showFilters);
     };
 
-    const showMap = document.getElementById('showFilters');
-    const map = document.getElementById('map');
-    showMap.addEventListener('click', function(){
-      map.classList.toggle('active');
-    });
+    this.toggleMapDisplay = function(){
+      vm.showMap = !(vm.showMap);
+    };
 
   }]);

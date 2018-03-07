@@ -1,13 +1,10 @@
 <main id="maincontent">
-	<section id="map-container">
-		<div id="map"></div>
-	</section>
 	<section class="filter-options">
-		<div class="option" id="showFilters" ng-click="data.toggleDisplayFilters()">
+		<div class="option" id="showFilters" ng-click="data.toggleFiltersDisplay()">
 			<i class="fas fa-filter fa-2x"></i>
 			<i class="fas fa-sort-down"></i><span class="name">Filter By....</span>
 		</div>
-		<div class="option" id="showMap">
+		<div class="option" id="showMap" ng-click="data.toggleMapDisplay()">
 	      	<i class="fas fa-map-marker-alt fa-2x"></i>
 	      	<span class="name">Map</span>
 	    </div>
@@ -29,6 +26,9 @@
 				<li>BBQ</li>
 			</ul>
 		</div>
+	</section>
+	<section id="map-container" ng-show="data.showMap">
+		<div id="map"></div>
 	</section>
 	<div id="restaurants-list">
 		<div class="card" ng-repeat="restaurant in data.allRestaurants" >
