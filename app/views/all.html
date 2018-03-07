@@ -17,13 +17,13 @@
 		<div class="filter-by">
 			<ul>
 				<li><i class="fas fa-map-signs"></i>&nbsp;Neighborhood</li>
-				<li ng-repeat="neighborhood in data.neighborhoods" ng-click="data.filterBy('neighborhood', 'Brooklyn')">{{neighborhood}}</li>
+				<li ng-repeat="neighborhood in data.neighborhoods" ng-click="data.filterBy('neighborhood', neighborhood)">{{neighborhood}}</li>
 			</ul>
 		</div>
 		<div class="filter-by">
 			<ul>
 				<li><i class="fas fa-utensils"></i>&nbsp;Cuisine</li>
-				<li ng-repeat="cuisineType in data.cuisineTypes" ng-click="data.filterBy('cuisineType', 'Pizza')">{{cuisineType}}</li>
+				<li ng-repeat="cuisineType in data.cuisineTypes" ng-click="data.filterBy('cuisineType', cuisineType)">{{cuisineType}}</li>
 			</ul>
 		</div>
 	</section>

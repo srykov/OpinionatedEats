@@ -13,8 +13,8 @@ angular.module('reviewsApp')
     var vm = this;
     this.showFilters = false;
     this.showMap = false;
-    this.neighborhoodFilter = 'Queens';
-    this.cuisineFilter = 'Mexican';
+    this.neighborhoodFilter = '';
+    this.cuisineFilter = '';
     this.filterType = 'neighborhood';
 
     vm.allRestaurants  = restaurantService.getAllRestaurants()
@@ -34,19 +34,29 @@ angular.module('reviewsApp')
     });
 
     this.filterBy = function(filterType, filterString){
+
       if(filterType === 'neighborhood'){
-        this.neighborhoodFilter = filterString;
+        vm.neighborhoodFilter = filterString;
       } else if(filterType === 'cuisineType'){
-        this.cuisineFilter = filterString;
+        vm.cuisineFilter = filterString;
       }
 
-      this.restaurantsToDisplay = this.allRestaurants.filter(function(restaurant){
-        if( (vm.cuisineTypeFilter && (restaurant.cuisineType === vm.cuisineTypeFilter)) &&
-            (vm.neighborhoodFilter && (restaurant.neighborhood === vm.neighborhoodFilter)) ){
-            return true;
-        }
+      if(vm.neighborhoodFilter){
+        this.restaurantsToDisplay = this.allRestaurants.filter(function(restaurant){
+          if(restaurant.neighborhood === vm.neighborhoodFilter){
+              return true;
+          }
+        });
+      }
 
-      });
+      if(vm.cuisineFilter){
+        this.restaurantsToDisplay = this.restaurantsToDisplay.filter(function(restaurant){
+          if(restaurant.cuisineType === vm.cuisineFilter){
+            return true;
+          }
+        });
+      }
+      console.log(vm.restaurantsToDisplay);
     };
 
     this.toggleFiltersDisplay = function(){
