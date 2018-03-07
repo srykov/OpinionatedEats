@@ -37,10 +37,16 @@ angular.module('reviewsApp')
         });
       };
 
-      this.getCusineTypes = function(){
-        console.log(this.getAllRestaurants());
+      this.getCuisineTypes = function(){
+        return this.getAllRestaurants().then(function(restaurants){
+          let cuisineTypeSet = new Set();
+          restaurants.forEach(function(restaurant){
+            cuisineTypeSet.add(restaurant.cuisineType);
+          });
+          const cuisineTypes = Array.from(cuisineTypeSet);
+          return cuisineTypes;
+        });
       };
-
 
    		this.getRestaurantById = function(id) {
    			return this.getAllRestaurants().then(function(data){

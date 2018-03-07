@@ -10,7 +10,7 @@
         "lat": 40.713829,
         "lng": -73.989667
       },
-      "cuisine_type": "Asian",
+      "cuisineType": "Asian",
       "operating_hours": [
         {
           "day": "Monday",
@@ -72,7 +72,7 @@
         "lat": 40.683555,
         "lng": -73.966393
       },
-      "cuisine_type": "Pizza",
+      "cuisineType": "Pizza",
       "operating_hours": [
         {
           "day": "Monday",
@@ -134,7 +134,7 @@
         "lat": 40.747143,
         "lng": -73.985414
       },
-      "cuisine_type": "Asian",
+      "cuisineType": "Asian",
       "operating_hours": [
         {
           "day": "Monday",
@@ -196,7 +196,7 @@
         "lat": 40.722216,
         "lng": -73.987501
       },
-      "cuisine_type": "American",
+      "cuisineType": "American",
       "operating_hours": [
         {
           "day": "Monday",
@@ -258,7 +258,7 @@
         "lat": 40.705089,
         "lng": -73.933585
       },
-      "cuisine_type": "Pizza",
+      "cuisineType": "Pizza",
       "operating_hours": [
         {
           "day": "Monday",
@@ -320,7 +320,7 @@
         "lat": 40.674925,
         "lng": -74.016162
       },
-      "cuisine_type": "American",
+      "cuisineType": "American",
       "operating_hours": [
         {
           "day": "Monday",
@@ -382,7 +382,7 @@
         "lat": 40.727397,
         "lng": -73.983645
       },
-      "cuisine_type": "American",
+      "cuisineType": "American",
       "operating_hours": [
         {
           "day": "Monday",
@@ -444,7 +444,7 @@
         "lat": 40.726584,
         "lng": -74.002082
       },
-      "cuisine_type": "American",
+      "cuisineType": "American",
       "operating_hours": [
         {
           "day": "Monday",
@@ -506,7 +506,7 @@
         "lat": 40.743797,
         "lng": -73.950652
       },
-      "cuisine_type": "Asian",
+      "cuisineType": "Asian",
       "operating_hours": [
         {
           "day": "Monday",
@@ -568,7 +568,7 @@
         "lat": 40.743394,
         "lng": -73.954235
       },
-      "cuisine_type": "Mexican",
+      "cuisineType": "Mexican",
       "operating_hours": [
         {
           "day": "Monday",

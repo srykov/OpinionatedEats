@@ -93,12 +93,19 @@ a {
   padding: 5px;
 }
 
-.filters .filter-by li:first-of-type{
+.filters .filter-by li:not(:first-of-type):hover {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.filters .filter-by li:first-of-type {
   font-weight: bold;
   border-top: none;
   color: #fff;
   background-color: #49a39c;
 }
+
+
 .filters .filter-by li:last-of-type{
   border:none;
 }
