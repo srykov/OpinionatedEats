@@ -32,7 +32,7 @@
 	</section>
 	<div id="restaurants-list">
 		<div class="card" ng-repeat="restaurant in data.allRestaurants" >
-			<img class="restaurant-img" ng-src="/images/small/{{restaurant.photograph}}">
+			<img class="restaurant-img" ng-src="/images/medium/{{restaurant.photograph}}">
 			<div class="card-info">
 				<a class="title" ui-sref="detail({id: restaurant.id})"><h4>{{restaurant.name}}</h4></a>
 				<p class="details">{{restaurant.cuisine_type}} - {{restaurant.neighborhood}}</p>

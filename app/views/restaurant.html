@@ -6,7 +6,7 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section class="restaurant-container">
-      <img class="restaurant-img" ng-src="/images/small/{{restaurant.data.photograph}}">
+      <img class="restaurant-img" ng-src="/images/medium/{{restaurant.data.photograph}}">
       <h2 id="restaurant-name">{{restaurant.data.name}}</h2>
       <div class="restaurant-details">
       	<p class="address">{{restaurant.data.address}}</p>
@@ -24,8 +24,8 @@
     		<li ng-repeat="review in restaurant.data.reviews">
     			<p class="details">{{review.name}} - {{review.date}}</p>
     			<p class="details">Rating:
-    			<span ng-repeat="n in [].constructor(review.rating) track by $index">
-    				<i class="fas fa-star star"></i>
+    			<span ng-repeat="n in [].constructor(5) track by $index">
+    				<i class="fa-star star" ng-class="{fas: $index < review.rating,  far: $index >= review.rating}"></i>
     			</div>
     			<p>{{review.comments}}</p>
     		</li>

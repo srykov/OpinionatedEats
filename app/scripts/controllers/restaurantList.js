@@ -29,28 +29,4 @@ angular.module('reviewsApp')
       map.classList.toggle('active');
     });
 
-  // 	this.allRestaurants = [
-  // 		{
-  // 			id: 1,
-  //   		name: 'Mission Chinese Food',
-  //   		photograph: '1.jpg',
-  //   		neighborhood: 'Manhattan',
-  //   		address: '171 E Broadway, New York, NY 10002'
-  //   	},
-		// {
-  // 			id: 2,
-  //   		name: 'Emily',
-  //   		photograph: '2.jpg',
-  //   		neighborhood: 'Brooklyn',
-  //   		address: '919 Fulton St, Brooklyn, NY 11238'
-  //   	},
-  //   	{
-  //   		id: 3,
-  //   		name: 'Kang Ho Dong Baekjeong',
-  //   		photograph: '3.jpg',
-  //   		neighborhood: 'Manhattan',
-  //   		address: '1 E 32nd St, New York, NY 10016'
-  //   	}
-  // 	];
-
   }]);
