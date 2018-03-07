@@ -11,17 +11,15 @@ angular.module('reviewsApp')
   .controller('RestaurantListCtrl', ['restaurant', function (restaurantService) {
 
     var vm = this;
+    this.showFilters = false;
 
     restaurantService.getAllRestaurants().then(function(data){
         vm.allRestaurants = data.restaurants;
-      });
-
-    const showFilters = document.getElementById('showFilters');
-    const filters = document.querySelector('.filters');
-
-    showFilters.addEventListener('click', function(){
-      filters.classList.toggle('active');
     });
+
+    this.toggleDisplayFilters = function(){
+      vm.showFilters = !(vm.showFilters);
+    };
 
     const showMap = document.getElementById('showFilters');
     const map = document.getElementById('map');

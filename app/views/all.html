@@ -3,7 +3,7 @@
 		<div id="map"></div>
 	</section>
 	<section class="filter-options">
-		<div class="option" id="showFilters">
+		<div class="option" id="showFilters" ng-click="data.toggleDisplayFilters()">
 			<i class="fas fa-filter fa-2x"></i>
 			<i class="fas fa-sort-down"></i><span class="name">Filter By....</span>
 		</div>
@@ -12,7 +12,7 @@
 	      	<span class="name">Map</span>
 	    </div>
 	</section>
-	<section class="filters">
+	<section class="filters" ng-show="data.showFilters">
 		<div class="filter-by">
 			<ul>
 				<li><i class="fas fa-map-signs"></i>&nbsp;Neighborhood</li>
