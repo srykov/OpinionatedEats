@@ -32,8 +32,8 @@ h1, h2, h3{
 }
 
 h1 {
-  text-align: center;
   font-size: 26px;
+  text-align: center;
 }
 
 h2 {
@@ -57,19 +57,10 @@ a {
 }
 
 header{
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-
-}
-
-header ul{
-  list-style: none;
-}
-
-header ul li{
-  border-left: 0.5px #000;
-  border-right: 0.5px #000;
-  display: contents;
+  background-color: #49a39c;
+  color: #fff;
 }
 
 .filter-options {
@@ -87,22 +78,22 @@ header ul li{
   text-align: center;
   padding: 10px;
   width: 45vw;
+  cursor: pointer;
 }
 
 .filters{
   color: #49a39c;
-  width: 100vw;
-  margin: 20px 0 5px 0;
+  margin: 20px
 }
 
 .filters .filter-by ul{
   list-style: none;
   text-align: left;
-  margin: 10px 0 10px 0;
+  margin: 0;
   padding: 0;
 }
 
-.filter-by i {
+.filters i {
   padding: 5px;
 }
 
@@ -110,8 +101,6 @@ header ul li{
   border-top: 0;
   background-color: #49a39c;
   color: #fff;
-  font-weight: bold;
-  margin: 2px;
   padding: 5px;
 }
 
@@ -143,7 +132,6 @@ header ul li{
 }
 
 
-
 .option .name{
   display: block;
   text-transform: uppercase;
@@ -154,12 +142,6 @@ header ul li{
   width: 100vw;
   background-color: #ccc;
   margin-top: 15px;
-}
-
-.filter {
-  height: 300px;
-  width: 100vw;
-  background-color: #ccc;
 }
 
 .no-results{
