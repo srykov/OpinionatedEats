@@ -8,12 +8,14 @@
  * Controller of the reviewsApp
  */
 angular.module('reviewsApp')
-  .controller('DetailCtrl', ['$stateParams', 'restaurant', function ($stateParams, restaurantService) {
+  .controller('DetailCtrl', ['$scope', '$stateParams', 'restaurant', function ($scope, $stateParams, restaurantService) {
 
     var vm = this;
 
    	restaurantService.getRestaurantById($stateParams.id).then(function(restaurant){
-   		vm.data = restaurant;
+   		$scope.$apply(function(){
+   			vm.data = restaurant;
+   		});
    	});
 
   }]);
