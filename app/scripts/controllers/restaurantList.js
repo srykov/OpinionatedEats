@@ -13,10 +13,10 @@ angular.module('reviewsApp')
     var vm = this;
     this.showFilters = false;
     this.showMap = false;
-    this.neighborhoodFilter = '';
-    this.cuisineFilter = '';
+    this.neighborhoodFilter = null;
+    this.cuisineFilter = null;
 
-    vm.allRestaurants  = restaurantService.getAllRestaurants()
+    restaurantService.getAllRestaurants()
     .then(function(restaurants){
         $scope.$apply(function(){
           vm.allRestaurants = restaurants;
@@ -40,16 +40,16 @@ angular.module('reviewsApp')
      */
     this.removeFilter = function(filterType){
       if(filterType === 'neighborhood'){
-        vm.neighborhoodFilter = '';
+        vm.neighborhoodFilter = null;
       } else if(filterType === 'cuisineType'){
-        vm.cuisineFilter = '';
+        vm.cuisineFilter = null;
       }
+
+      this.filterResults();
 
       if(!vm.neighborhoodFilter && !vm.cuisineFilter){
         this.toggleFiltersDisplay();
       }
-
-      this.filterResults();
     };
 
 
@@ -70,6 +70,11 @@ angular.module('reviewsApp')
      * Apply the filters to the restaurant results.
      */
     this.filterResults = function(){
+
+      //reset results
+      vm.restaurantsToDisplay = vm.allRestaurants;
+
+      //apply neighborhood filter
       if(vm.neighborhoodFilter){
         vm.restaurantsToDisplay = vm.allRestaurants.filter(function(restaurant){
           if(restaurant.neighborhood === vm.neighborhoodFilter){
@@ -78,6 +83,7 @@ angular.module('reviewsApp')
         });
       }
 
+      //apply cuisine type filter
       if(vm.cuisineFilter){
         vm.restaurantsToDisplay = vm.restaurantsToDisplay.filter(function(restaurant){
           if(restaurant.cuisineType === vm.cuisineFilter){
