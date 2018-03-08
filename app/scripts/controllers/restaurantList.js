@@ -8,7 +8,7 @@
  * Controller of the reviewsApp
  */
 angular.module('reviewsApp')
-  .controller('RestaurantListCtrl', ['restaurant', function (restaurantService) {
+  .controller('RestaurantListCtrl', ['$scope', 'restaurant', function ($scope, restaurantService) {
 
     var vm = this;
     this.showFilters = false;
@@ -18,8 +18,10 @@ angular.module('reviewsApp')
 
     vm.allRestaurants  = restaurantService.getAllRestaurants()
     .then(function(restaurants){
-        vm.allRestaurants = restaurants;
-        vm.restaurantsToDisplay = restaurants;
+        $scope.$apply(function(){
+          vm.allRestaurants = restaurants;
+          vm.restaurantsToDisplay = restaurants;
+        });
     });
 
     this.neighborhoods = restaurantService.getNeighborhoods()
