@@ -24,10 +24,23 @@ angular.module('reviewsApp')
         });
     });
 
-    this.neighborhoods = restaurantService.getNeighborhoods()
-    .then(function(neighborhoods){
-      vm.neighborhoods = neighborhoods;
-    });
+    this.getNeighborhoods = function(){
+      let neighborhoodSet = new Set();
+      vm.restaurantsToDisplay.forEach(function(restaurant){
+        neighborhoodSet.add(restaurant.neighborhood);
+      });
+      const neighborhoods = Array.from(neighborhoodSet);
+      return neighborhoods;
+    };
+
+    this.getCuisineTypes = function(){
+      let cuisineTypeSet = new Set();
+      vm.restaurantsToDisplay.forEach(function(restaurant){
+        cuisineTypeSet.add(restaurant.cuisineType);
+      });
+      const cuisines = Array.from(cuisineTypeSet);
+      return cuisines;
+    };
 
     this.cuisineTypes = restaurantService.getCuisineTypes()
     .then(function(cuisineTypes){

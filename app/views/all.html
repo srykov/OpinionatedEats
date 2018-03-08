@@ -17,7 +17,7 @@
 				<li class="filter-name">
 					<i class="fas fa-map-signs"></i>Filter by Neighborhood:
 				</li>
-				<li class="filter-option" ng-show="!(data.neighborhoodFilter)" ng-repeat="neighborhood in data.neighborhoods" ng-click="data.setFilter('neighborhood', neighborhood)">{{neighborhood}}
+				<li class="filter-option" ng-show="!(data.neighborhoodFilter)" ng-repeat="neighborhood in data.getNeighborhoods()" ng-click="data.setFilter('neighborhood', neighborhood)">{{neighborhood}}
 				</li>
 				<li class="filter-value" ng-show="data.neighborhoodFilter">
 					<i class="fas fa-check"></i> {{data.neighborhoodFilter}}
@@ -30,7 +30,7 @@
 				<li class="filter-name">
 					<i class="fas fa-utensils"></i>Filter by Cuisine:
 				</li>
-				<li class="filter-option" ng-show="!(data.cuisineFilter)" ng-repeat="cuisineType in data.cuisineTypes" ng-click="data.setFilter('cuisineType', cuisineType)">{{cuisineType}}
+				<li class="filter-option" ng-show="!(data.cuisineFilter)" ng-repeat="cuisineType in data.getCuisineTypes()" ng-click="data.setFilter('cuisineType', cuisineType)">{{cuisineType}}
 				</li>
 				<li class="filter-value" ng-show="data.cuisineFilter">
 					<i class="fas fa-check"></i> {{data.cuisineFilter}}
