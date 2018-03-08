@@ -52,14 +52,14 @@
 	<!--restaurants-->
 	<div id="restaurants-list">
 		<div class="no-results" ng-hide="data.restaurantsToDisplay.length  > 0">We couldn't find any matching results. Change your filter options.</div>
-		<div class="card" ng-repeat="restaurant in data.restaurantsToDisplay" >
+		<article class="card" ng-repeat="restaurant in data.restaurantsToDisplay" >
 			<img class="restaurant-img" ng-src="/images/medium/{{restaurant.photograph}}">
 			<div class="card-info">
 				<a class="title" ui-sref="detail({id: restaurant.id})"><h4>{{restaurant.name}}</h4></a>
 				<p class="details">{{restaurant.cuisineType}} - {{restaurant.neighborhood}}</p>
 				<p class="details">{{restaurant.address}}</p>
 			</div>
-		</div>
+		</article>
 	</div>
 </main>
 

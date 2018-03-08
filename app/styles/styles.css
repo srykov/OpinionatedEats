@@ -151,7 +151,7 @@ header{
   text-transform: uppercase;
 }
 
-.card{
+article{
   border-top: 1px dashed #8f9595;
   margin: 10px;
   padding-top: 10px;
@@ -159,7 +159,7 @@ header{
   flex-direction: column;
 }
 
-.card:first-of-type{
+article:first-of-type{
   border: none;
 }
 
