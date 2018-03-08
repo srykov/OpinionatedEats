@@ -15,6 +15,7 @@ angular.module('reviewsApp')
     this.showMap = false;
     this.neighborhoodFilter = null;
     this.cuisineFilter = null;
+    this.googleMapsUrl='https://maps.googleapis.com/maps/api/js?key=AIzaSyAPDYsk6lPaqe-0lYkKqfibUPCuO6dS22Q';
 
     restaurantService.getAllRestaurants()
     .then(function(restaurants){

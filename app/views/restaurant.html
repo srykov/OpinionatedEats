@@ -16,7 +16,11 @@
 
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map" style="position: relative; overflow: hidden;"></div>
+  		<div map-lazy-load="{{restaurant.data.googleMapsUrl}}">
+		  <ng-map center="{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}" zoom="12">
+		  	<marker position=“{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}” />
+		  </ng-map>
+		</div>
     </section>
     <!-- End map -->
 
