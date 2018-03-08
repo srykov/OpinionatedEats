@@ -49,8 +49,8 @@ angular.module('reviewsApp')
       };
 
    		this.getRestaurantById = function(id) {
-   			return this.getAllRestaurants().then(function(data){
-   				const restaurant = data.restaurants.find(function(element){
+   			return this.getAllRestaurants().then(function(restaurants){
+   				const restaurant = restaurants.find(function(element){
    					return element.id === id;
    				});
    				return restaurant;
