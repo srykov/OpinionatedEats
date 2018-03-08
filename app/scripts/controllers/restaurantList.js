@@ -25,21 +25,27 @@ angular.module('reviewsApp')
     });
 
     this.getNeighborhoods = function(){
-      let neighborhoodSet = new Set();
-      vm.restaurantsToDisplay.forEach(function(restaurant){
-        neighborhoodSet.add(restaurant.neighborhood);
-      });
-      const neighborhoods = Array.from(neighborhoodSet);
-      return neighborhoods;
+
+      if(vm.restaurantsToDisplay !== undefined){
+        let neighborhoodSet = new Set();
+        vm.restaurantsToDisplay.forEach(function(restaurant){
+          neighborhoodSet.add(restaurant.neighborhood);
+        });
+        const neighborhoods = Array.from(neighborhoodSet);
+        return neighborhoods;
+      }
     };
 
     this.getCuisineTypes = function(){
-      let cuisineTypeSet = new Set();
-      vm.restaurantsToDisplay.forEach(function(restaurant){
-        cuisineTypeSet.add(restaurant.cuisineType);
-      });
-      const cuisines = Array.from(cuisineTypeSet);
-      return cuisines;
+
+      if(vm.restaurantsToDisplay !== undefined){
+        let cuisineTypeSet = new Set();
+        vm.restaurantsToDisplay.forEach(function(restaurant){
+          cuisineTypeSet.add(restaurant.cuisineType);
+        });
+        const cuisines = Array.from(cuisineTypeSet);
+        return cuisines;
+      }
     };
 
     this.cuisineTypes = restaurantService.getCuisineTypes()
