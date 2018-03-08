@@ -153,6 +153,7 @@ header ul li{
   height: 300px;
   width: 100vw;
   background-color: #ccc;
+  margin-top: 15px;
 }
 
 .filter {
