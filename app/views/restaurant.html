@@ -5,9 +5,15 @@
       <img class="restaurant-img" ng-src="/images/medium/{{restaurant.data.photograph}}">
       <h2 id="restaurant-name">{{restaurant.data.name}}</h2>
       <div class="restaurant-details">
-      	<p class="address">{{restaurant.data.address}}</p>
-      	<table id="restaurant-hours">
-      		<tr ng-repeat="schedule in restaurant.data.operating_hours">
+      	<p class="restaurant-address" ng-click="restaurant.toggleMapDisplay()"><i class="fas fa-map-marker-alt"></i> {{restaurant.data.address}}</p>
+      	<p class="hours-today" ng-click="restaurant.toggleScheduleDisplay()">
+      		<i class="far fa-clock"></i>
+      		Hours: {{restaurant.todaysHours}}
+      		<i class="fas fa-sort-down" ng-hide="restaurant.showSchedule"></i>
+      		<i class="fas fa-sort-up" ng-show="restaurant.showSchedule"></i>
+      	</p>
+      	<table class="restaurant-hours" ng-show="restaurant.showSchedule">
+      		<tr ng-repeat="schedule in restaurant.data.operatingHours" ng-class="{'today': schedule.day == restaurant.currentDayOfWeek}">
       			<td>{{schedule.day}}</td><td>{{schedule.hours}}</td>
       		</tr>
       	</table>
@@ -15,7 +21,7 @@
     <!-- end restaurant -->
 
     <!-- Beginning map -->
-    <section id="map-container">
+    <section id="map-container" ng-show="restaurant.showMap">
   		<div map-lazy-load="{{restaurant.data.googleMapsUrl}}">
 		  <ng-map center="{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}" zoom="12">
 		  	<marker position=“{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}” />

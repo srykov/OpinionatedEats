@@ -55,9 +55,9 @@
 
 	<!--restaurants-->
 	<div id="restaurants-list">
-		<div class="no-results" ng-hide="data.restaurantsToDisplay.length  > 0">We couldn't find any matching results. Change your filter options.</div>
+		<div class="no-results" ng-hide="data.restaurantsToDisplay.length  > 0">We could not find any matching results. Change your filter options.</div>
 		<article class="card" ng-repeat="restaurant in data.restaurantsToDisplay" >
-			<img class="restaurant-img" ng-src="/images/small/{{restaurant.photograph}}"
+			<img class="restaurant-img" ng-src="/images/medium/{{restaurant.photograph}}"
 			alt="{{restaurant.name}}">
 			<div class="card-info">
 				<a class="title" ui-sref="detail({id: restaurant.id})"><h4>{{restaurant.name}}</h4></a>

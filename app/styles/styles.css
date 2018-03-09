@@ -195,7 +195,26 @@ article:first-of-type{
   margin: 15px;
 }
 
-.restaurant-details .address{
+.restaurant-details i{
+  padding: 5px;
+  color: #49a39c;
+}
+
+.restaurant-address {
+  cursor: pointer;
+}
+
+.hours-today {
+  cursor: pointer;
+  padding: 0;
+}
+
+.restaurant-hours {
+  padding: 10px 0 10px 0;
+  font-size: 12px;
+}
+
+.restaurant-hours .today {
   font-weight: bold;
 }
 
@@ -237,4 +256,24 @@ footer{
   color: #8f9595;
   margin: 10px;
   font-size: 10px;
+}
+
+
+/*tablet*/
+@media screen and (min-width:413px) and (max-width:769px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+
+}
+
+/*desktop*/
+@media screen and (min-width:769px) {
+  body {
+    margin: 0 100px;
+  }
+
+
 }

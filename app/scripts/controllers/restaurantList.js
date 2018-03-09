@@ -117,13 +117,13 @@ angular.module('reviewsApp')
      * Open and close the filters
      */
     this.toggleFiltersDisplay = function(){
-      this.showFilters = !(vm.showFilters);
-      this.showMap = false;
+      vm.showFilters = !(vm.showFilters);
+      vm.showMap = false;
     };
 
     this.toggleMapDisplay = function(){
-      this.showMap = !(vm.showMap);
-      this.showFilters = false;
+      vm.showMap = !(vm.showMap);
+      vm.showFilters = false;
     };
 
 

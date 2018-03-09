@@ -11,7 +11,7 @@
         "lng": -73.989667
       },
       "cuisineType": "Asian",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "5:30 pm - 11:00 pm"
@@ -73,7 +73,7 @@
         "lng": -73.966393
       },
       "cuisineType": "Pizza",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "5:30 pm - 11:00 pm"
@@ -135,7 +135,7 @@
         "lng": -73.985414
       },
       "cuisineType": "Asian",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "11:30 am - 2:00 am"
@@ -197,7 +197,7 @@
         "lng": -73.987501
       },
       "cuisineType": "American",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "8:00 am - 10:30 pm"
@@ -259,7 +259,7 @@
         "lng": -73.933585
       },
       "cuisineType": "Pizza",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "11:00 am - 12:00 am"
@@ -321,7 +321,7 @@
         "lng": -74.016162
       },
       "cuisineType": "American",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "Closed"
@@ -383,7 +383,7 @@
         "lng": -73.983645
       },
       "cuisineType": "American",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "11:30 am - 10:00 pm"
@@ -445,7 +445,7 @@
         "lng": -74.002082
       },
       "cuisineType": "American",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "11:30 am - 3:00 pm, 5:30 pm - 11:00 pm"
@@ -507,7 +507,7 @@
         "lng": -73.950652
       },
       "cuisineType": "Asian",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "5:00 pm - 10:00 pm"
@@ -569,7 +569,7 @@
         "lng": -73.954235
       },
       "cuisineType": "Mexican",
-      "operating_hours": [
+      "operatingHours": [
         {
           "day": "Monday",
           "hours": "5:00 pm - 12:00 am"
