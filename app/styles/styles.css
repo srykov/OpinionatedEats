@@ -207,6 +207,7 @@ article:first-of-type{
 .hours-today {
   cursor: pointer;
   padding: 0;
+  margin: 5px 0 5px 0;
 }
 
 .restaurant-hours {
