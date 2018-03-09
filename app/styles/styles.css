@@ -86,7 +86,7 @@ header{
 }
 
 .filter-menu-option i{
-  padding: 1px;
+  padding: 2px;
 }
 
 .filter-menu-option .name{
@@ -96,7 +96,8 @@ header{
 /*filters*/
 .filters{
   color: #49a39c;
-  margin: 10px
+  margin: 10px;
+  border-bottom: 0.5px solid;
 }
 
 .filters .filter-by ul{
@@ -156,6 +157,9 @@ header{
 /* Restaurants on list page*/
 .restaurant-list {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .no-results{
@@ -166,16 +170,16 @@ header{
 }
 
 article{
-  border-top: 1px solid #49a39c;
   max-width: 100vw;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 0 5px 10px 5px;
 }
 
-article:first-of-type{
-  border: none;
+ .restaurant-list .image-container{
+  max-width: 100vw;
 }
 
 .restaurant-img{
@@ -185,30 +189,36 @@ article:first-of-type{
   border-radius: 1px;
 }
 
-.restaurant-details{
+.restaurant-list .info{
   color: #8f9595;
   padding: 0 5px 0 5px;
 }
 
+.restaurant-item .info p{
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 0 5px;
+}
+
 
 a .restaurant-name{
-  width: 100vw;
   padding: 0 5px 0 5px;
 }
 
-.restaurant-detail{
+.restaurant-address{
   margin: 5px 5px 0 5px;
+  font-weight: bold;
 }
 
 .restaurant-detail i{
   color: #49a39c;
-  padding: 0 5px 0 5px;
+  padding: 0 10px 0 5px;
 }
 
 
 /*Detail Page*/
 
-.restaurant-container {
+.restaurant-detail {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -216,19 +226,19 @@ a .restaurant-name{
   max-width: 100vw;
 }
 
-.restaurant-image-container{
-  width: 95vw;
-}
-
-.restaurant-details-container{
-  width: 100vw;
-}
-
 .restaurant-info{
   padding: 5px 0 5px 0;
   margin: 5px 0 5px 0;
   text-align: left;
   color: #8f9595;
+}
+
+.schedule-small{
+  display: block;
+}
+
+.schedule{
+  display: none;
 }
 
 .restaurant-info i {
@@ -250,7 +260,7 @@ a .restaurant-name{
 }
 
 .restaurant-hours {
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10px 5px;
   font-size: 12px;
 }
 
@@ -301,10 +311,12 @@ footer{
 }
 
 
+
+
+
 /* Media queries */
 
-/*tablet*/
-@media screen and (min-width:426px) and (max-width:769px) {
+@media screen and (min-width:426px) {
 
   h1 {
     font-size: 36px;
@@ -314,26 +326,49 @@ footer{
     text-align: left;
   }
 
-  .restaurant-container{
+  .restaurant-list {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
- .restaurant-image-container{
-    width: 50vw;
+  .restaurant-item .info ul{
+    display: block;
   }
 
- .restaurant-details-container{
-    width: 50vw;
+  .restaurant-details ul{
+    display: block;
+    padding-left: 20px;
   }
 
-  .restaurant-name{
-    width: 50vw;
+  .schedule-small{
+    display: none;
   }
 
+  .schedule{
+    display: block;
+  }
+
+  .restaurant-hours {
+    font-size: 14px;
+  }
+
+}
+
+
+
+/*tablet*/
+@media screen and (min-width:426px) and (max-width:769px) {
+
+  .restaurant-list .restaurant-item{
+    width: 30vw;
+  }
 }
 
 /*desktop*/
 @media screen and (min-width:769px) {
 
+  .restaurant-list .restaurant-item{
+    width: 22vw;
+  }
 
 }

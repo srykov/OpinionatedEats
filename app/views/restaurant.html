@@ -1,26 +1,39 @@
-<main id="maincontent">
+<main class="restaurant">
 
     <!-- Beginning restaurant -->
     <section class="restaurant-container">
-      <div class="restaurant-image-container">
-      	<img class="restaurant-img" ng-src="/images/small/{{restaurant.data.photograph}}">
-      </div>
-      <div class="restaurant-details-container">
+      <div class="restaurant-details">
       	<div class="restaurant-name"><h2>{{restaurant.data.name}}</h2></div>
       	<div class="restaurant-info">
-	      	<p class="detail restaurant-address" ng-click="restaurant.toggleMapDisplay()"><i class="fas fa-map-marker-alt"></i> {{restaurant.data.address}}</p>
-	      	<p class="detail hours-today" ng-click="restaurant.toggleScheduleDisplay()">
-	      		<i class="far fa-clock"></i>
-	      		Hours: {{restaurant.todaysHours}}
-	      		<i class="fas fa-sort-down" ng-hide="restaurant.showSchedule"></i>
-	      		<i class="fas fa-sort-up" ng-show="restaurant.showSchedule"></i>
-	      	</p>
-	      	<table class="restaurant-hours" ng-show="restaurant.showSchedule">
-	      		<tr ng-repeat="schedule in restaurant.data.operatingHours" ng-class="{'today': schedule.day == restaurant.currentDayOfWeek}">
-	      			<td>{{schedule.day}}</td><td>{{schedule.hours}}</td>
-	      		</tr>
-	      	</table>
+	      	<p class="restaurant-address" ng-click="restaurant.toggleMapDisplay()"><i class="fas fa-map-marker-alt"></i> {{restaurant.data.address}}</p>
+	      	<div class="schedule-small">
+		      	<p class="hours-today" ng-click="restaurant.toggleScheduleDisplay()">
+		      		<i class="far fa-clock"></i>
+		      		Hours: {{restaurant.todaysHours}}
+		      		<i class="fas fa-sort-down" ng-hide="restaurant.showSchedule"></i>
+		      		<i class="fas fa-sort-up" ng-show="restaurant.showSchedule"></i>
+		      	</p>
+		      	<table class="restaurant-hours" ng-show="restaurant.showSchedule">
+		      		<tr ng-repeat="schedule in restaurant.data.operatingHours" ng-class="{'today': schedule.day == restaurant.currentDayOfWeek}">
+		      			<td>{{schedule.day}}</td><td>{{schedule.hours}}</td>
+		      		</tr>
+		      	</table>
+		     </div>
+	      	<div class="schedule">
+		      	<p class="hours-today">
+		      		<i class="far fa-clock"></i>
+		      		Hours:
+		      	</p>
+		      	<table class="restaurant-hours">
+		      		<tr ng-repeat="schedule in restaurant.data.operatingHours" ng-class="{'today': schedule.day == restaurant.currentDayOfWeek}">
+		      			<td>{{schedule.day}}</td><td>{{schedule.hours}}</td>
+		      		</tr>
+		      	</table>
+		     </div>
 	     </div>
+      </div>
+      <div class="restaurant-image-container">
+      	<img class="restaurant-img" ng-src="/images/medium/{{restaurant.data.photograph}}">
       </div>
     </section>
     <!-- end restaurant -->
