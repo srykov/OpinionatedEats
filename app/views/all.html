@@ -1,16 +1,16 @@
 <main id="maincontent">
-	<section class="filter-options">
-		<div class="option" ng-click="data.toggleFiltersDisplay()">
+	<section class="filter-menu" ng-class="{open:data.showFilter">
+		<div class="filter-menu-option" ng-click="data.toggleFiltersDisplay()">
 			<i class="fas fa-filter"></i>
+			<span class="name">Filter By....</span>
 			<i class="fas fa-sort-down" ng-hide="data.showFilters"></i>
 			<i class="fas fa-sort-up" ng-show="data.showFilters"></i>
-			<span class="name">Filter By....</span>
 		</div>
-		<div class="option" ng-click="data.toggleMapDisplay()">
+		<div class="filter-menu-option" ng-click="data.toggleMapDisplay()">
 	      	<i class="fas fa-map-marker-alt"></i>
+	      	<span class="name">Show Map</span>
 	      	<i class="fas fa-sort-down" ng-hide="data.showMap"></i>
 	      	<i class="fas fa-sort-up" ng-show="data.showMap"></i>
-	      	<span class="name">Show Map</span>
 	    </div>
 	</section>
 
@@ -54,15 +54,20 @@
 	</section>
 
 	<!--restaurants-->
-	<div id="restaurants-list">
-		<div class="no-results" ng-hide="data.restaurantsToDisplay.length  > 0">We could not find any matching results. Change your filter options.</div>
-		<article class="card" ng-repeat="restaurant in data.restaurantsToDisplay" >
-			<img class="restaurant-img" ng-src="/images/medium/{{restaurant.photograph}}"
+	<div class="restaurant-list">
+		<div class="no-results" ng-hide="data.restaurantsToDisplay.length  > 0">
+			We could not find any matching results. Change your filter options.
+		</div>
+		<article ng-repeat="restaurant in data.restaurantsToDisplay">
+			<div class="restaurant-details">
+				<img class="restaurant-img" ng-src="/images/medium/{{restaurant.photograph}}"
 			alt="{{restaurant.name}}" ui-sref="detail({id: restaurant.id})">
-			<div class="card-info">
-				<a class="title" ui-sref="detail({id: restaurant.id})"><h4>{{restaurant.name}}</h4></a>
-				<p class="details">{{restaurant.cuisineType}} - {{restaurant.neighborhood}}</p>
-				<p class="details">{{restaurant.address}}</p>
+			</div>
+			<div class="restaurant-details">
+				<a class="restaurant-name" ui-sref="detail({id: restaurant.id})"><h2>{{restaurant.name}}</h2></a>
+				<p class="restaurant-detail">{{restaurant.address}}</p>
+				<p class="restaurant-detail"><i class="fas fa-utensils"></i>{{restaurant.cuisineType}}&nbsp; &nbsp; &nbsp;<i class="fas fa-map-signs"></i>{{restaurant.neighborhood}}</p>
+
 			</div>
 		</article>
 	</div>
