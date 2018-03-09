@@ -1,11 +1,10 @@
-<main class="restaurant">
+<main class="detail-page">
 
     <!-- Beginning restaurant -->
-    <section class="restaurant-container">
-      <div class="restaurant-details">
-      	<div class="restaurant-name"><h2>{{restaurant.data.name}}</h2></div>
+    <section class="restaurant-details">
       	<div class="restaurant-info">
-	      	<p class="restaurant-address" ng-click="restaurant.toggleMapDisplay()"><i class="fas fa-map-marker-alt"></i> {{restaurant.data.address}}</p>
+	    	<div class="restaurant-name"><h2>{{restaurant.data.name}}</h2></div>
+	      	<p ng-click="restaurant.toggleMapDisplay()"><i class="fas fa-map-marker-alt"></i> {{restaurant.data.address}}</p>
 	      	<div class="schedule-small">
 		      	<p class="hours-today" ng-click="restaurant.toggleScheduleDisplay()">
 		      		<i class="far fa-clock"></i>
@@ -31,10 +30,10 @@
 		      	</table>
 		     </div>
 	     </div>
-      </div>
-      <div class="restaurant-image-container">
-      	<img class="restaurant-img" ng-src="/images/medium/{{restaurant.data.photograph}}">
-      </div>
+
+	      <div class="image-container">
+	      	<img class="restaurant-img" ng-src="/images/medium/{{restaurant.data.photograph}}">
+	      </div>
     </section>
     <!-- end restaurant -->
 
