@@ -392,7 +392,7 @@ footer{
 @media screen and (min-width:426px) and (max-width:769px) {
 
   .restaurant-list .restaurant-item{
-    width: 45vw;
+    width: calc((100vw / 2) - 10px);
   }
 
   .detail-page .restaurant-info{
@@ -418,8 +418,9 @@ footer{
 @media screen and (min-width:769px) {
 
   .restaurant-list .restaurant-item{
-    width: 24vw;
+    width: calc((100vw / 4) - 10px);
   }
+
 
   .detail-page #map {
     border: 1px solid black;
