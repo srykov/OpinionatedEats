@@ -1,10 +1,17 @@
-<main id="maincontent">
+<header>
+	<div class="header-logo">
+		<h1 ui-sref="home">Opinionated Eats</h1>
+	</div>
 	<section class="filter-menu" ng-class="{open:data.showFilter}">
-		<div class="filter-menu-option" ng-click="data.toggleFiltersDisplay()">
-			<i class="fas fa-filter"></i>
-			<span class="name">Filter By....</span>
-			<i class="fas fa-sort-down" ng-hide="data.showFilters"></i>
-			<i class="fas fa-sort-up" ng-show="data.showFilters"></i>
+		<div class="filter-menu-option" ng-click="data.toggleNeighborhoodFilterDisplay()">
+			<span class="name">Neighborhoods</span>
+			<i class="fas fa-sort-down" ng-hide="data.showNeighborhoodFilter"></i>
+			<i class="fas fa-sort-up" ng-show="data.showNeighborhoodFilter"></i>
+		</div>
+		<div class="filter-menu-option" ng-click="data.toggleCuisineFilterDisplay()">
+			<span class="name">Cuisine Types</span>
+			<i class="fas fa-sort-down" ng-hide="data.showCuisineFilter"></i>
+			<i class="fas fa-sort-up" ng-show="data.showCuisineFilter"></i>
 		</div>
 		<div class="filter-menu-option" ng-click="data.toggleMapDisplay()">
 	      	<i class="fas fa-map-marker-alt"></i>
@@ -15,12 +22,9 @@
 	</section>
 
 	<!-- filters -->
-	<section class="filters" ng-show="data.showFilters">
-		<div class="filter-by">
+	<section class="filters" >
+		<div class="filter-by" ng-show="data.showNeighborhoodFilter">
 			<ul>
-				<li class="filter-name">
-					<i class="fas fa-map-signs"></i>Filter by Neighborhood:
-				</li>
 				<li class="filter-option" ng-show="!(data.neighborhoodFilter)" ng-repeat="neighborhood in data.getNeighborhoods()" ng-click="data.setFilter('neighborhood', neighborhood)">{{neighborhood}}
 				</li>
 				<li class="filter-value" ng-show="data.neighborhoodFilter">
@@ -29,11 +33,8 @@
 				</li>
 			</ul>
 		</div>
-		<div class="filter-by">
+		<div class="filter-by" ng-show="data.showCuisineFilter">
 			<ul>
-				<li class="filter-name">
-					<i class="fas fa-utensils"></i>Filter by Cuisine:
-				</li>
 				<li class="filter-option" ng-show="!(data.cuisineFilter)" ng-repeat="cuisineType in data.getCuisineTypes()" ng-click="data.setFilter('cuisineType', cuisineType)">{{cuisineType}}
 				</li>
 				<li class="filter-value" ng-show="data.cuisineFilter">
@@ -43,6 +44,10 @@
 			</ul>
 		</div>
 	</section>
+</header>
+
+<main id="maincontent">
+
 
 	<!-- map -->
 	<section id="map-container" ng-show="data.showMap">
@@ -70,7 +75,6 @@
 				<a class="restaurant-name" ui-sref="detail({id: restaurant.id})"><h2>{{restaurant.name}}</h2></a>
 				<p>{{restaurant.cuisineType}} - {{restaurant.neighborhood}}</p>
 				<p class="restaurant-address">{{restaurant.address}}</p>
-				</ul>
 			</div>
 
 		</article>

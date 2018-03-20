@@ -116,14 +116,23 @@ angular.module('reviewsApp')
     /*
      * Open and close the filters
      */
-    this.toggleFiltersDisplay = function(){
-      vm.showFilters = !(vm.showFilters);
+    this.toggleNeighborhoodFilterDisplay = function(){
+      vm.showNeighborhoodFilter = !(vm.showNeighborhoodFilter);
+      vm.showCuisineFilter = false;
       vm.showMap = false;
     };
 
+    this.toggleCuisineFilterDisplay = function(){
+      vm.showCuisineFilter = !(vm.showCuisineFilter);
+      vm.showNeighborhoodFilter = false;
+      vm.showMap = false;
+    };
+
+
     this.toggleMapDisplay = function(){
       vm.showMap = !(vm.showMap);
-      vm.showFilters = false;
+      vm.showNeighborhoodFilter = false;
+      vm.showCuisineFilter = false;
     };
 
 

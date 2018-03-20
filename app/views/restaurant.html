@@ -1,7 +1,13 @@
+<header>
+	<div class="header-logo">
+		<h1 ui-sref="home">Opinionated Eats</h1>
+	<div>
+</header>
 <main class="detail-page">
 
-    <!-- Beginning restaurant -->
+
     <section class="restaurant-details">
+    	<!-- Beginning restaurant Info -->
       	<div class="restaurant-info">
 	    	<div class="restaurant-name"><h2>{{restaurant.data.name}}</h2></div>
 	      	<p ng-click="restaurant.toggleMapDisplay()"><i class="fas fa-map-marker-alt"></i> {{restaurant.data.address}}</p>
@@ -29,23 +35,28 @@
 		      		</tr>
 		      	</table>
 		     </div>
-	     </div>
+	    </div>
+	    <!-- End restaurant Info -->
 
-	      <div class="image-container">
-	      	<img class="restaurant-img" ng-src="/images/medium/{{restaurant.data.photograph}}">
-	      </div>
+		<!-- Beginning restaurant Image -->
+	    <div class="image-container">
+	    	<img class="restaurant-img" ng-src="/images/medium/{{restaurant.data.photograph}}">
+	    </div>
+	    <!-- End restaurant Image -->
+
+		<!-- Beginning map -->
+	    <div id="map-container" ng-show="restaurant.showMap">
+	  		<div map-lazy-load="{{restaurant.data.googleMapsUrl}}">
+			  <ng-map center="{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}" zoom="12">
+			  	<marker position=“{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}” />
+			  </ng-map>
+			</div>
+			<!-- End map -->
+	    </div>
+
     </section>
     <!-- end restaurant -->
 
-    <!-- Beginning map -->
-    <div id="map-container" ng-show="restaurant.showMap">
-  		<div map-lazy-load="{{restaurant.data.googleMapsUrl}}">
-		  <ng-map center="{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}" zoom="12">
-		  	<marker position=“{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}” />
-		  </ng-map>
-		</div>
-    </div>
-    <!-- End map -->
 
     <!-- Beginning reviews -->
     <section class="reviews">
