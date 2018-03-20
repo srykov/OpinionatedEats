@@ -12,7 +12,7 @@ angular.module('reviewsApp')
 
     var vm = this;
     this.showFilters = false;
-    this.showMap = false;
+    this.showMap = true;
     this.neighborhoodFilter = null;
     this.cuisineFilter = null;
     this.googleMapsUrl='https://maps.googleapis.com/maps/api/js?key=AIzaSyAPDYsk6lPaqe-0lYkKqfibUPCuO6dS22Q';
@@ -119,13 +119,11 @@ angular.module('reviewsApp')
     this.toggleNeighborhoodFilterDisplay = function(){
       vm.showNeighborhoodFilter = !(vm.showNeighborhoodFilter);
       vm.showCuisineFilter = false;
-      vm.showMap = false;
     };
 
     this.toggleCuisineFilterDisplay = function(){
       vm.showCuisineFilter = !(vm.showCuisineFilter);
       vm.showNeighborhoodFilter = false;
-      vm.showMap = false;
     };
 
 

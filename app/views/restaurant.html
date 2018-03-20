@@ -8,7 +8,9 @@
     	<!-- Beginning restaurant Info -->
       	<div class="restaurant-info">
 	    	<div class="restaurant-name"><h2>{{restaurant.data.name}}</h2></div>
-	      	<p ng-click="restaurant.toggleMapDisplay()"><i class="fas fa-map-marker-alt"></i> {{restaurant.data.address}}</p>
+			<p class="restaurant-map-address">
+				<i class="fas fa-map-marker-alt"></i> {{restaurant.data.address}}
+			</p>
 	      	<div class="schedule-small">
 		      	<p class="hours-today" ng-click="restaurant.toggleScheduleDisplay()">
 		      		<i class="far fa-clock"></i>
@@ -43,8 +45,8 @@
 	    <!-- End restaurant Image -->
 
 		<!-- Beginning map -->
-	    <div id="map-container" ng-show="restaurant.showMap">
-	  		<div map-lazy-load="{{restaurant.data.googleMapsUrl}}">
+      	<div class="map-container">
+	  		<div map-lazy-load="{{restaurant.data.googleMapsUrl}}"  ng-show="restaurant.showMap">
 			  <ng-map center="{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}" zoom="12">
 			  	<marker position=“{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}” />
 			  </ng-map>

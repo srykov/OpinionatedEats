@@ -13,12 +13,6 @@
 			<i class="fas fa-sort-down" ng-hide="data.showCuisineFilter"></i>
 			<i class="fas fa-sort-up" ng-show="data.showCuisineFilter"></i>
 		</div>
-		<div class="filter-menu-option" ng-click="data.toggleMapDisplay()">
-	      	<i class="fas fa-map-marker-alt"></i>
-	      	<span class="name">Map</span>
-	      	<i class="fas fa-sort-down" ng-hide="data.showMap"></i>
-	      	<i class="fas fa-sort-up" ng-show="data.showMap"></i>
-	    </div>
 	</section>
 
 	<!-- filters -->
@@ -48,7 +42,7 @@
 
 <main id="maincontent">
 	<!-- map -->
-	<section id="map-container" ng-show="data.showMap">
+	<section class="map-container" ng-show="data.showMap">
 		<div map-lazy-load="{{data.googleMapsUrl}}">
 		  <ng-map center="40.722216,-73.987501" zoom="12">
 		  	<marker position=“{{restaurant.latlng.lat}},{{restaurant.latlng.lng}}” ng-repeat="restaurant in data.restaurantsToDisplay"/>
