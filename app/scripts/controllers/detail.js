@@ -11,7 +11,7 @@ angular.module('reviewsApp')
   .controller('DetailCtrl', ['$scope', '$stateParams', 'restaurant', function ($scope, $stateParams, restaurantService) {
 
     var vm = this;
-    this.showMap = false;
+    this.showMap = true;
     this.showSchedule = false;
     this.todaysHours = '';
     this.currentDayOfWeek = '';

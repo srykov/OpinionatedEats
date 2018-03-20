@@ -15,14 +15,14 @@
 		</div>
 		<div class="filter-menu-option" ng-click="data.toggleMapDisplay()">
 	      	<i class="fas fa-map-marker-alt"></i>
-	      	<span class="name">Show Map</span>
+	      	<span class="name">Map</span>
 	      	<i class="fas fa-sort-down" ng-hide="data.showMap"></i>
 	      	<i class="fas fa-sort-up" ng-show="data.showMap"></i>
 	    </div>
 	</section>
 
 	<!-- filters -->
-	<section class="filters" >
+	<section class="filters">
 		<div class="filter-by" ng-show="data.showNeighborhoodFilter">
 			<ul>
 				<li class="filter-option" ng-show="!(data.neighborhoodFilter)" ng-repeat="neighborhood in data.getNeighborhoods()" ng-click="data.setFilter('neighborhood', neighborhood)">{{neighborhood}}
@@ -47,7 +47,6 @@
 </header>
 
 <main id="maincontent">
-
 
 	<!-- map -->
 	<section id="map-container" ng-show="data.showMap">

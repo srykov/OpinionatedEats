@@ -63,6 +63,10 @@ header{
   color: #fff;
 }
 
+.small{
+  display: block;
+}
+
 .header-logo{
   width: 100vw;
 }
@@ -105,6 +109,7 @@ header{
 .filters{
   color: #49a39c;
   background-color: #fff;
+  border-bottom: 0.5px solid;
 }
 
 .filters .filter-by ul{
@@ -122,11 +127,6 @@ header{
 .filter-by .filter-option {
   margin: 0 0 2px 10px;
   padding: 5px;
-  border: 0;
-}
-
-.filter-by .filter-option-last {
-  border: 0;
 }
 
 .filter-by .filter-option:hover {
@@ -356,7 +356,10 @@ footer{
 
   .restaurant-list {
     flex-direction: row;
-    flex-wrap: wrap;
+  }
+
+  .restaurant-item .info ul{
+    display: block;
   }
 
   .restaurant-details {
@@ -364,16 +367,12 @@ footer{
     flex-wrap: wrap;
   }
 
-  .restaurant-item .info ul{
-    display: block;
-  }
-
   .restaurant-details ul{
     display: block;
     padding-left: 20px;
   }
 
-  .schedule-small{
+  .small{
     display: none;
   }
 
@@ -393,7 +392,7 @@ footer{
 @media screen and (min-width:426px) and (max-width:769px) {
 
   .restaurant-list .restaurant-item{
-    width: 40vw;
+    width: 45vw;
   }
 
   .detail-page .restaurant-info{
@@ -419,7 +418,7 @@ footer{
 @media screen and (min-width:769px) {
 
   .restaurant-list .restaurant-item{
-    width: 22vw;
+    width: 24vw;
   }
 
   .detail-page #map {
