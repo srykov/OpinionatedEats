@@ -372,7 +372,7 @@ footer{
     padding-left: 20px;
   }
 
-  .small{
+  .schedule-small{
     display: none;
   }
 
@@ -403,12 +403,14 @@ footer{
     width: 50vw;
   }
 
+
   .detail-page #map {
-    border: 1px solid black;
     height: 300px;
     width: 100vw;
-    background-color: #ccc;
-    margin-top: 15px;
+  }
+
+  .detail-page .map-container{
+    width: 100vw;
   }
 
 
@@ -419,6 +421,10 @@ footer{
 
   .restaurant-list .restaurant-item{
     width: calc((100vw / 4) - 10px);
+  }
+
+  .detail-page .map-container{
+    width: 30vw;
   }
 
 

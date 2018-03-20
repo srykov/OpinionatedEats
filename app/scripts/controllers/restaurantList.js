@@ -66,10 +66,8 @@ angular.module('reviewsApp')
       }
 
       this.filterResults();
-
-      if(!vm.neighborhoodFilter && !vm.cuisineFilter){
-        this.toggleFiltersDisplay();
-      }
+      vm.showNeighborhoodFilter = false;
+      vm.showCuisineFilter = false;
     };
 
 
@@ -84,6 +82,8 @@ angular.module('reviewsApp')
       }
 
       this.filterResults();
+      vm.showNeighborhoodFilter = false;
+      vm.showCuisineFilter = false;
     };
 
     /*
