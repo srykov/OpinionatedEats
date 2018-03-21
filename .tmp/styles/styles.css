@@ -342,8 +342,9 @@ footer{
     justify-content: flex-start;
   }
 
-  .restaurant-item .info ul{
-    display: block;
+  article{
+    align-self: flex-start;
+    padding: 10px 5px 10px 5px;
   }
 
   .restaurant-details {
@@ -364,10 +365,6 @@ footer{
     display: block;
   }
 
-  .restaurant-hours {
-    font-size: 14px;
-  }
-
 }
 
 
@@ -381,14 +378,20 @@ footer{
     text-align: left;
   }
 
+  h2{
+    font-size: 20px;
+  }
+
  article{
     width: calc(100vw/2 - 10px);
-    padding: 10px 5px 10px 5px;
-    align-self: flex-start;
   }
 
   .detail-page .restaurant-info{
     width: 45vw;
+  }
+
+  .detail-page .restaurant-info p{
+    font-size: 12px;
   }
 
   .detail-page .image-container{
@@ -409,7 +412,7 @@ footer{
 }
 
 /*desktop*/
-@media screen and (min-width:769px) {
+@media screen and (min-width:900px) {
 
   .restaurant-list .restaurant-item{
     width: calc((100vw / 4) - 10px);
@@ -420,20 +423,21 @@ footer{
   }
 
   .detail-page .image-container{
-     width: calc((100vw / 3) - 10px);
+     padding-right: 5px;
   }
 
   .detail-page .map-container{
     width: calc((100vw / 3) - 10px);
   }
 
+  .restaurant-hours {
+    font-size: 14px;
+  }
+
 
   .detail-page #map {
-    border: 1px solid black;
+    width: 30vw;
     height: 300px;
-    width: 300px;
-    background-color: #ccc;
-    margin-top: 15px;
   }
 
 }
