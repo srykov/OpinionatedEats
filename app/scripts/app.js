@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-	.module('reviewsApp', ['ui.router','ngMap'])
+	.module('reviewsApp', ['ui.router','ngMap', 'ng-responsive-image'])
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
 		$urlRouterProvider.otherwise('/');
