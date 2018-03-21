@@ -28,13 +28,13 @@ h1, h2, h3{
   margin: 0;
   background-color: #49a39c;
   color: #fff;
-  padding: 10px;
 }
 
 h1 {
   font-size: 26px;
   text-align: center;
   font-weight: 600;
+  padding: 10px;
 }
 
 h2 {
@@ -73,7 +73,6 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100vw;
   border-bottom: 0.5px solid;
 }
 
@@ -83,7 +82,6 @@ header {
 
 .filter-menu-option {
   background-color: #fff;
-  border-bottom: 0.5px solid;
   cursor: pointer;
   font-size: 10px;
   padding: 10px 2px 10px 2px;
@@ -308,11 +306,6 @@ footer{
 
 @media screen and (min-width:426px) {
 
-  h1 {
-    text-align: left;
-    font-size: 24px;
-  }
-
   h2 {
     text-align: left;
   }
@@ -329,8 +322,6 @@ footer{
     color: #fff;
     background-color: #49a39c;
     border: 0;
-    border: 1px solid red;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
   }
@@ -341,7 +332,6 @@ footer{
     width: 30vw;
     color: #fff;
     background-color: #49a39c;
-    border: 1px solid black;
   }
 
   .filters{
@@ -386,7 +376,9 @@ footer{
 @media screen and (min-width:426px) and (max-width:769px) {
 
   h1{
-    font-size: 24px;
+    font-size: 20px;
+    padding: 10px 3px 10px 5px;
+    text-align: left;
   }
 
   .restaurant-list .restaurant-item{
