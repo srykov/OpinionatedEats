@@ -4,7 +4,8 @@
   "dependencies": {
     "angular": "^1.4.0",
     "angular-ui-router": "^1.0.15",
-    "ng-responsive-image": "^1.0.0"
+    "ngmap": "^1.18.4" ,
+    "angular-responsive-images": "^0.1.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
