@@ -26,7 +26,7 @@ body {
 h1, h2, h3{
   text-transform: uppercase;
   margin: 0;
-  background-color: #49a39c;
+  background-color: #B30000;
   color: #fff;
 }
 
@@ -39,7 +39,7 @@ h1 {
 
 h2 {
   background-color: #fff;
-  color: #49a39c;
+  color: #B30000;
   font-size: 28px;
   font-weight: 700;
   padding: 0 5px 0 5px;
@@ -57,16 +57,31 @@ a {
 }
 
 header {
-  background-color: #49a39c;
+  background-color: #B30000;
   color: #fff;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
+.skip-link{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus{
+  top:0;
+
+}
+
 /* filter menu */
 .filter-menu {
-  color: #49a39c;
+  color: #B30000;
   background-color: #fff;
   text-align: center;
   display: flex;
@@ -99,7 +114,7 @@ header {
 
 /*filters*/
 .filters{
-  color: #49a39c;
+  color: #B30000;
   background-color: #fff;
   border-bottom: 0.5px solid;
 }
@@ -154,7 +169,7 @@ header {
 }
 
 .no-results{
-  color: #49a39c;
+  color: #B30000;
   font-size: 16px;
   padding: 15px;
   text-transform: uppercase;
@@ -226,7 +241,7 @@ a .restaurant-name{
 
 .restaurant-info i {
   padding: 5px;
-  color: #49a39c;
+  color: #B30000;
 }
 
 .schedule-small{
@@ -279,7 +294,7 @@ a .restaurant-name{
 }
 
 .reviews ul li .star{
-  color: #49a39c;
+  color: #B30000;
 }
 
 .reviews li .review-details{
@@ -320,7 +335,7 @@ footer{
   .filter-menu {
     align-items: center;
     color: #fff;
-    background-color: #49a39c;
+    background-color: #B30000;
     border: 0;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -331,7 +346,7 @@ footer{
     font-size: 14px;
     width: 30vw;
     color: #fff;
-    background-color: #49a39c;
+    background-color: #B30000;
   }
 
   .filters{

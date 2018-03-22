@@ -64,6 +64,21 @@ header {
   flex-wrap: wrap;
 }
 
+.skip-link{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus{
+  top:0;
+
+}
+
 /* filter menu */
 .filter-menu {
   color: #B30000;
