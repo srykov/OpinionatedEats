@@ -349,7 +349,7 @@ footer{
 
   .restaurant-details {
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .restaurant-details ul{
@@ -370,7 +370,7 @@ footer{
 
 
 /*tablet*/
-@media screen and (min-width:426px) and (max-width:769px) {
+@media screen and (min-width:426px) and (max-width:900px) {
 
   h1{
     font-size: 20px;
@@ -387,7 +387,7 @@ footer{
   }
 
   .detail-page .restaurant-info{
-    width: 45vw;
+    width: 35vw;
   }
 
   .detail-page .restaurant-info p{
@@ -395,7 +395,7 @@ footer{
   }
 
   .detail-page .image-container{
-    width: 50vw;
+    width: 60vw;
   }
 
 
@@ -418,26 +418,24 @@ footer{
     width: calc((100vw / 4) - 10px);
   }
 
-  .detail-page .restaurant-info{
-     width: calc((100vw / 3) - 10px);
+  .restaurant-details {
+    flex-wrap: nowrap;
   }
 
   .detail-page .image-container{
      padding-right: 5px;
+     width: 50vw;
+     height: 30vw;
   }
 
   .detail-page .map-container{
-    width: calc((100vw / 3) - 10px);
+    width: 30vw;
+    height: 30vw;
+    background-color: #fff;
   }
 
   .restaurant-hours {
     font-size: 14px;
-  }
-
-
-  .detail-page #map {
-    width: 30vw;
-    height: 300px;
   }
 
 }
