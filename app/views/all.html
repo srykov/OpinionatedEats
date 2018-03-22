@@ -2,6 +2,7 @@
 	<div class="header-logo">
 		<h1 ui-sref="home">Opinionated Eats</h1>
 	</div>
+	<a href="#maincontent" target="_self" class="skip-link">Skip to Main Content</a>
 	<section class="filter-menu" ng-class="{open:data.showFilter}">
 		<div class="filter-menu-option" ng-click="data.toggleNeighborhoodFilterDisplay()">
 			<span class="name">Neighborhoods</span>
@@ -42,16 +43,16 @@
 
 <main class="list-page">
 	<!-- map -->
-	<section class="map-container" ng-show="data.showMap">
-		<div map-lazy-load="{{data.googleMapsUrl}}">
-		  <ng-map center="40.722216,-73.987501" zoom="12">
-		  	<marker position=“{{restaurant.latlng.lat}},{{restaurant.latlng.lng}}” ng-repeat="restaurant in data.restaurantsToDisplay"/>
+	<section class="map-container" ng-show="data.showMap" tabindex="-1">
+		<div map-lazy-load="{{data.googleMapsUrl}}" tabindex="-1">
+		  <ng-map center="40.722216,-73.987501" zoom="12" tabindex="-1">
+		  	<marker tabindex="-1" position=“{{restaurant.latlng.lat}},{{restaurant.latlng.lng}}” ng-repeat="restaurant in data.restaurantsToDisplay"/>
 		  </ng-map>
 		</div>
 	</section>
 
 	<!--restaurants-->
-	<div class="restaurant-list">
+	<div class="restaurant-list" id="maincontent">
 		<div class="no-results" ng-hide="data.restaurantsToDisplay.length  > 0">
 			We could not find any matching results. Change your filter options.
 		</div>
