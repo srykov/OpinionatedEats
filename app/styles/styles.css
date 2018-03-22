@@ -141,7 +141,7 @@ header {
 /*map*/
 .map-container {
   background-color: #ccc;
-  width: 95vw;
+  width: 100vw;
 }
 
 /* Restaurants on list page*/
@@ -339,7 +339,7 @@ footer{
 
   .restaurant-list {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   article{
