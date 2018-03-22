@@ -3,14 +3,15 @@
 		<h1 ui-sref="home">Opinionated Eats</h1>
 	</div>
 	<a href="#maincontent" target="_self" class="skip-link">Skip to Main Content</a>
-	<section class="filter-menu" ng-class="{open:data.showFilter}" role="menu">
-		<div class="filter-menu-option" aria-haspopup="true" role="menuitem" ng-click="data.toggleNeighborhoodFilterDisplay()">
+
+	<section class="filter-menu" ng-class="{open:data.showFilter}">
+		<div class="filter-menu-option" aria-haspopup="true" role="menu" ng-click="data.toggleNeighborhoodFilterDisplay()" ng-focus="data.toggleNeighborhoodFilterDisplay()" ng-blur="data.toggleNeighborhoodFilterDisplay()" aria-owns="neighborhoodGroup">
 			<span class="name">Neighborhoods</span>
 			<i class="fas fa-sort-down" ng-hide="data.showNeighborhoodFilter"></i>
 			<i class="fas fa-sort-up" ng-show="data.showNeighborhoodFilter"></i>
 		</div>
-		<div aria-owns="filterByNeighborhood"></div>
-		<div class="filter-menu-option" aria-haspopup="true" role="menuitem" ng-click="data.toggleCuisineFilterDisplay()">
+		<div aria-owns="neighborhoodGroup"></div>
+		<div class="filter-menu-option" aria-haspopup="true" role="menu" ng-click="data.toggleCuisineFilterDisplay()"  ng-focus="data.toggleCuisineFilterDisplay()" ng-blur="data.toggleCuisineFilterDisplay()">
 			<span class="name">Cuisine Types</span>
 			<i class="fas fa-sort-down" ng-hide="data.showCuisineFilter"></i>
 			<i class="fas fa-sort-up" ng-show="data.showCuisineFilter"></i>
@@ -20,9 +21,9 @@
 
 	<!-- filters -->
 	<section class="filters">
-		<div class="filter-by" ng-show="data.showNeighborhoodFilter" role="menu" id="filterByNeighborhood">
+		<div class="filter-by" ng-show="data.showNeighborhoodFilter" role="group" id="neighborhoodGroup">
 			<ul>
-				<li role="menuitem" class="filter-option" ng-show="!(data.neighborhoodFilter)" ng-repeat="neighborhood in data.getNeighborhoods()" ng-click="data.setFilter('neighborhood', neighborhood)">{{neighborhood}}
+				<li role="menuitem" class="filter-option" tabindex="-1" ng-show="!(data.neighborhoodFilter)" ng-repeat="neighborhood in data.getNeighborhoods()" ng-click="data.setFilter('neighborhood', neighborhood)">{{neighborhood}}
 				</li>
 				<li class="filter-value" ng-show="data.neighborhoodFilter">
 					<i class="fas fa-check"></i> {{data.neighborhoodFilter}}
@@ -30,7 +31,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="filter-by" ng-show="data.showCuisineFilter" role="menu" id="filterByCuisine">
+		<div class="filter-by" ng-show="data.showCuisineFilter" role="group" id="filterByCuisine">
 			<ul>
 				<li role="menuitem" class="filter-option" ng-show="!(data.cuisineFilter)" ng-repeat="cuisineType in data.getCuisineTypes()" ng-click="data.setFilter('cuisineType', cuisineType)">{{cuisineType}}
 				</li>
