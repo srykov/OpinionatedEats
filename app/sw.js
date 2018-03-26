@@ -13,6 +13,8 @@ self.addEventListener('install', function(event) {
         '/scripts/controllers/detail.js',
         '/scripts/controllers/restaurantList.js',
         '/scripts/services/restaurant.js',
+        '/bower_components/angular.js',
+        '/bower_components/release/angular-ui-router.js',
         '/images/favicon.png',
         '/images/small/1.jpg',
         '/images/small/2.jpg',
