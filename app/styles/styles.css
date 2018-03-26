@@ -104,6 +104,10 @@ header {
   width: 33vw;
 }
 
+.filter-menu-option:focus{
+  outline: #B30000 2px dotted;
+}
+
 .filter-menu-option i{
   padding: 2px;
 }
@@ -348,6 +352,11 @@ footer{
     color: #fff;
     background-color: #B30000;
   }
+
+.filter-menu-option:focus{
+  outline: #fff 2px dotted;
+  z-index: 100;
+}
 
   .filters{
     width: 100vw;
