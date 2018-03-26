@@ -23,7 +23,7 @@
 	<section class="filters">
 		<div class="filter-by" ng-show="data.showNeighborhoodFilter" role="menu" id="neighborhoodGroup">
 			<ul>
-				<li role="menuitem" class="filter-option" tabindex="-1" ng-show="!(data.neighborhoodFilter)" ng-repeat="neighborhood in data.getNeighborhoods()" id="n{{$index}}" ng-click="data.setFilter('neighborhood', neighborhood)">{{neighborhood}}{{index}}
+				<li role="menuitem" class="filter-option" ng-show="!(data.neighborhoodFilter)" ng-repeat="neighborhood in data.getNeighborhoods()" id="n{{$index}}" ng-click="data.setFilter('neighborhood', neighborhood)">{{neighborhood}}{{index}}
 				</li>
 				<li class="filter-value" ng-show="data.neighborhoodFilter">
 					<i class="fas fa-check"></i> {{data.neighborhoodFilter}}

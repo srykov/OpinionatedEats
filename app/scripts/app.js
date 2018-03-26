@@ -12,6 +12,8 @@ angular
 	.module('reviewsApp', ['ui.router','ngMap','ngAria'])
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
+		navigator.serviceWorker.register('/sw.js');
+
 		$urlRouterProvider.otherwise('/');
 
 		$stateProvider
