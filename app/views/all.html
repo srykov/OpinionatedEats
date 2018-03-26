@@ -6,13 +6,13 @@
 
 	<section class="filter-menu" ng-class="{open:data.showFilter}" role="menu">
 
-		<div class="filter-menu-option" role="menuitem" ng-click="data.toggleNeighborhoodFilterDisplay()">
-			<span class="name" role='menuitem' >Neighborhoods</span>
+		<div class="filter-menu-option" role="menuitem" ng-click="data.toggleNeighborhoodFilterDisplay()" tabindex="-1">
+			<span class="name" role='menuitem'>Neighborhoods</span>
 			<i class="fas fa-sort-down" ng-hide="data.showNeighborhoodFilter"></i>
 			<i class="fas fa-sort-up" ng-show="data.showNeighborhoodFilter"></i>
 		</div>
 
-		<div class="filter-menu-option" role="menuitem" ng-click="data.toggleCuisineFilterDisplay()">
+		<div class="filter-menu-option" tabindex="-1" role="menuitem" ng-click="data.toggleCuisineFilterDisplay()">
 			<span class="name">Cuisine Types</span>
 			<i class="fas fa-sort-down" ng-hide="data.showCuisineFilter"></i>
 			<i class="fas fa-sort-up" ng-show="data.showCuisineFilter"></i>
