@@ -40,6 +40,37 @@ self.addEventListener('install', function(event) {
   );
 });
 
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          return cacheName.startsWith('opinionated-eats-') &&
+                 cacheName != staticCacheName;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  // TODO: respond to requests for the root page with
+  // the page skeleton from the cache
+
+  let request = event.request;
+  if(event.request.url === '/#!'){
+    request.url = '/index.html';
+  }
+
+  event.respondWith(
+    caches.match(request).then(function(response) {
+      return response || fetch(request);
+    })
+  );
+});
+
 
 
 
