@@ -47,7 +47,7 @@
 		<!-- Beginning map -->
       	<div class="map-container">
 	  		<div map-lazy-load="{{restaurant.data.googleMapsUrl}}"  ng-show="restaurant.showMap">
-			  <ng-map aria-role="application" center="{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}" zoom="12">
+			  <ng-map role="application" center="{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}" zoom="12">
 			  	<marker position=“{{restaurant.data.latlng.lat}},{{restaurant.data.latlng.lng}}” />
 			  </ng-map>
 			</div>
