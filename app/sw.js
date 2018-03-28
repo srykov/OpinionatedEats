@@ -2,8 +2,6 @@ var staticCacheName = 'opinionated-eats-static-' + Date.now();
 
 self.addEventListener('install', function(event) {
 
-  console.log(staticCacheName);
-
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache) {
       return cache.addAll([
@@ -43,13 +41,10 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  console.log('activate');
-
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
-          console.log(cacheName);
           return cacheName.startsWith('opinionated-eats-static-') &&
                  cacheName != staticCacheName;
         }).map(function(cacheName) {
