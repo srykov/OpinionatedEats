@@ -63,8 +63,7 @@
 		<article class="restaurant-item" ng-repeat="restaurant in data.restaurantsToDisplay">
 
 			<div class="restaurant-list-image">
-				<img class="restaurant-img" ng-src="/images/small/{{restaurant.photograph}}"
-			alt="{{restaurant.name}}" ui-sref="detail({id: restaurant.id})">
+				<img class="restaurant-img" ng-src="/images/small/{{restaurant.photograph}}" ui-sref="detail({id: restaurant.id})" alt="Photo of {{restaurant.name}} restaurant in {{restaurant.neighborhood}}">
 			</div>
 
 			<div class="info">
