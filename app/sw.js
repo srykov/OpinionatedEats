@@ -8,6 +8,7 @@ self.addEventListener('install', function(event) {
         '/index.html',
         '/views/all.html',
         '/views/restaurant.html',
+        '/data/restaurants.json',
         '/styles/styles.css',
         '/scripts/app.js',
         '/scripts/controllers/detail.js',
