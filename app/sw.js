@@ -1,6 +1,8 @@
-var staticCacheName = 'opinionated-eats-static';
+var staticCacheName = 'opinionated-eats-static-' + Date.now();
 
 self.addEventListener('install', function(event) {
+
+  console.log(staticCacheName);
 
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache) {
@@ -13,8 +15,6 @@ self.addEventListener('install', function(event) {
         '/scripts/controllers/detail.js',
         '/scripts/controllers/restaurantList.js',
         '/scripts/services/restaurant.js',
-        '/bower_components/angular.js',
-        '/bower_components/release/angular-ui-router.js',
         '/images/favicon.png',
         '/images/small/1.jpg',
         '/images/small/2.jpg',
@@ -37,6 +37,25 @@ self.addEventListener('install', function(event) {
         '/images/large/9.jpg',
         '/images/large/10.jpg'
       ]);
+    })
+  );
+});
+
+self.addEventListener('activate', function(event) {
+
+  console.log('activate');
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          console.log(cacheName);
+          return cacheName.startsWith('opinionated-eats-static-') &&
+                 cacheName != staticCacheName;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
     })
   );
 });
